@@ -1,0 +1,10 @@
+body {
+    background-color: darkturquoise;
+}
+
+h1 {
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+}
