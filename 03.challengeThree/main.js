@@ -9,12 +9,15 @@ while (healthPoints != 1000) {
     else if (healthPoints < 500 && healthPoints >=100) {
         console.log ('Use an x-potion');
     }
+    else if (healthPoints < 100 && healthPoints >=1) {
+        console.log ('Use an elixir');
+    }
     else if (healthPoints === 0) {
         console.log ('Ups, game over!')
     }
     else {
         console.log ('Error, try again!')
     }
-        healthPoints = prompt('How many health points do you have?');
+        healthPoints = parseInt(prompt('How many health points do you have?'));
         console.log(healthPoints);
 }
