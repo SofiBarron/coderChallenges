@@ -1,3 +1,7 @@
+const productOne = parseFloat (prompt('Ingrese el valor del primer producto'));
+const productTwo = parseFloat (prompt('Ingrese el valor del segundo producto'));
+const discount = 0.10;
+
 function toPay(productOne, productTwo, discount) {
     result = 0;
     productSum = productOne+productTwo;
@@ -12,11 +16,9 @@ function toPay(productOne, productTwo, discount) {
 }
 
 function showResult() {
-    productOne = parseFloat (prompt('Ingrese el valor del primer producto'));
-    productTwo = parseFloat (prompt('Ingrese el valor del segundo producto'));
-    discount = 0.10;
-
     total = toPay(productOne, productTwo, discount);
 
     alert("El valor a pagar es de " + total)
 }
+
+showResult ()
