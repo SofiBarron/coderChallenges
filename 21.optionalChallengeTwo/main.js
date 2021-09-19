@@ -15,8 +15,14 @@ const productList = [];
 productList.push (new Products(1, 'Beastars Vol. 9', 805, 25));
 productList.push (new Products(2, 'Slam Dunk Vol. 5', 805.10, 25));
 productList.push (new Products(3, 'Atelier of Witch Hat Vol. 1', 500, 20));
+productList.push (new Products(4, 'Ku Vol. 1', 450, 15));
+productList.push (new Products(5, 'The Sandman Vol. 1', 1800, 20));
+productList.push (new Products(6, 'The Old Guard Vol. 2', 1750, 10));
 
-for (const Products of productList) {
-    console.log(Products.identifier);
-    console.log(Products.name);
+function descPriceOrder (a,b) { 
+    return a.price - b.price;
 }
+
+console.log(productList);
+productList.sort(descPriceOrder);
+console.log(productList);
