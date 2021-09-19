@@ -16,6 +16,7 @@ function toPay(productOne, productTwo, discount) {
 }
 
 function showResult() {
+    let total = 0;
     total = toPay(productOne, productTwo, discount);
 
     alert("El valor a pagar es de " + total)
