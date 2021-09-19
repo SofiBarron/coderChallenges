@@ -20,9 +20,8 @@ productList.push (new Products(5, 'The Sandman Vol. 1', 1800, 20));
 productList.push (new Products(6, 'The Old Guard Vol. 2', 1750, 10));
 
 function descPriceOrder (a,b) { 
-    return a.price - b.price;
+    return b.price - a.price;
 }
 
-console.log(productList);
 productList.sort(descPriceOrder);
 console.log(productList);
