@@ -1,0 +1,26 @@
+@import '../abstracts/variables';
+
+.introTitle {
+    font-family: $fontColorHighlight;
+    font-weight: bolder;
+    color: $fontColorSubtle;
+    margin-bottom: .5rem;
+}
+
+.introParagraph {
+    font-family: $fontOthers;
+    font-weight: bolder;
+    color: $fontColorGrey;
+    font-size: 20px;
+    margin-bottom: .5rem;
+    display: inline;
+}
+
+.jumbotronImg {
+    background-size: cover;
+    height: 100%;
+}
+
+.catalogueContainer {
+    margin-bottom: 150px;
+}
