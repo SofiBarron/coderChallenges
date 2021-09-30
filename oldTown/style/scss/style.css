@@ -1,0 +1,166 @@
+/* Base - Reset */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mainBgColor {
+  background-color: #EFE2BA;
+}
+
+/*Abstracts*/
+/* Font Families */
+/* Font Colour Variations */
+/* Box - Background Color */
+/* Box - Background */
+/* Borders Color Variations */
+/*Pages*/
+/* Font Families */
+/* Font Colour Variations */
+/* Box - Background Color */
+/* Box - Background */
+/* Borders Color Variations */
+.introTitle {
+  font-family: #9A1750;
+  font-weight: bolder;
+  color: #EE4C7C;
+  margin-bottom: .5rem;
+}
+
+.introParagraph {
+  font-family: "Lato", sans-serif;
+  font-weight: bolder;
+  color: #1f2833;
+  font-size: 20px;
+  margin-bottom: .5rem;
+  display: inline;
+}
+
+.jumbotronImg {
+  background-size: cover;
+  height: 100%;
+}
+
+.catalogueContainer {
+  margin-bottom: 150px;
+}
+
+/*Layout*/
+/* Header - Navbar Responsive Logo */
+.logoSize {
+  width: auto;
+  height: 150px;
+}
+
+.logoB {
+  height: 50px;
+  width: auto;
+}
+
+.menuStyle {
+  background-color: #1f2833;
+}
+
+/* Font Families */
+/* Font Colour Variations */
+/* Box - Background Color */
+/* Box - Background */
+/* Borders Color Variations */
+/* Links Style */
+a {
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  color: #EE4C7C;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+  font-style: normal;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #9A1750;
+}
+
+a:active {
+  color: #5D001E;
+  font-weight: bold;
+}
+
+/* Font Families */
+/* Font Colour Variations */
+/* Box - Background Color */
+/* Box - Background */
+/* Borders Color Variations */
+.footerPosition {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1f2833;
+}
+
+.footerStyle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* Social Links */
+.socialLinks {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.twitter {
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 0 5px;
+}
+
+/*Components*/
+/* Font Families */
+/* Font Colour Variations */
+/* Box - Background Color */
+/* Box - Background */
+/* Borders Color Variations */
+.catalogueCard {
+  background-color: #9A1750;
+}
+
+.catalogueCardTitle {
+  font-family: "Raleway", sans-serif;
+  color: #1f2833;
+}
+
+.catalogueCardSub {
+  font-family: "Lato", sans-serif;
+}
+
+.catalogueCardButton {
+  background-color: #EE4C7C;
+  font-family: "Lato", sans-serif;
+  color: #1f2833;
+}
+
+.btn {
+  border-color: #5D001E;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,13 @@
+body {
+    background-color: cornflowerblue;
+}
+
+h1, h2, h3, h4 {
+    color: cornsilk;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p {
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
