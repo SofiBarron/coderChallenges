@@ -1,14 +1,18 @@
+@import '../abstracts/variables';
+
 /* Header - Navbar Responsive Logo */
-.logoSize {
+.webLogo {
     width: auto;
-    height: 150px;
+    height: 90px;
 }
 
-.logoB {
-    height: 50px;
-    width: auto;
-}
+.searchBarButton {
+    background: $fontColorHighlight;
+    border-color: $fontColorGrey;
+    color: $fontColorText;
 
-.menuStyle {
-    background-color: #1f2833;
+    &:hover {
+        background: $fontColorSubtle;
+        border-color: $fontColorHighlight;
+    }
 }

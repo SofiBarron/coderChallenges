@@ -47,19 +47,25 @@
 }
 
 /*Layout*/
+/* Font Families */
+/* Font Colour Variations */
+/* Box - Background Color */
+/* Box - Background */
+/* Borders Color Variations */
 /* Header - Navbar Responsive Logo */
-.logoSize {
+.webLogo {
   width: auto;
-  height: 150px;
+  height: 90px;
 }
 
-.logoB {
-  height: 50px;
-  width: auto;
+.searchBarButton {
+  background: #9A1750;
+  border-color: #1f2833;
+  color: #272727;
 }
-
-.menuStyle {
-  background-color: #1f2833;
+.searchBarButton:hover {
+  background: #EE4C7C;
+  border-color: #9A1750;
 }
 
 /* Font Families */
@@ -126,27 +132,54 @@ a:active {
 /* Box - Background Color */
 /* Box - Background */
 /* Borders Color Variations */
+.container__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+}
+
 .catalogueCard {
-  background-color: #9A1750;
+  background-color: #EE4C7C;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  min-height: 10rem;
+  max-height: 15rem;
 }
 
 .catalogueCardTitle {
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+  padding-top: 10px;
   font-family: "Raleway", sans-serif;
   color: #1f2833;
 }
 
-.catalogueCardSub {
+.catalogueCardSubp {
   font-family: "Lato", sans-serif;
+  text-align: center;
+  padding: 0 8px;
 }
 
-.catalogueCardButton {
-  background-color: #EE4C7C;
+.catalogueCardSubh6 {
   font-family: "Lato", sans-serif;
-  color: #1f2833;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
 }
 
-.btn {
-  border-color: #5D001E;
+.errorContanerMessage {
+  text-align: center;
+  font-size: 2rem;
+  color: "Raleway", sans-serif;
+  grid-column: 1/10;
+}
+
+.btn-outline-success {
+  color: #EE4C7C;
+  border-color: #1f2833;
 }
 
 /*# sourceMappingURL=style.css.map */

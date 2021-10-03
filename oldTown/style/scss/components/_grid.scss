@@ -1,25 +1,51 @@
 @import '../abstracts/variables';
 
-.catalogueCard {
-    background-color: $fontColorHighlight;
+.container__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-gap: 2rem;
 }
 
+.catalogueCard {
+    background-color: $fontColorSubtle;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        min-height: 10rem;
+        max-height: 15rem;
+}
 
 .catalogueCardTitle {
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+    padding-top: 10px;
     font-family: $fontTitles;
     color: $fontColorGrey;
 }
 
-.catalogueCardSub {
+.catalogueCardSubp {
     font-family: $fontOthers;
+    text-align: center;
+    padding: 0 8px;
 }
 
-.catalogueCardButton {
-    background-color: $fontColorSubtle;
+.catalogueCardSubh6 {
     font-family: $fontOthers;
-    color: $fontColorGrey;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
 }
 
-.btn {
-    border-color: $fontColorDark;
+.errorContanerMessage {
+    text-align: center;
+	font-size: 2rem;
+	color: $fontTitles;
+	grid-column: 1/10;
+}
+
+.btn-outline-success {
+    color: $fontColorSubtle;
+    border-color: $fontColorGrey;
 }
