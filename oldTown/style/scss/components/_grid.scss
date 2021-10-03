@@ -8,12 +8,12 @@
 
 .catalogueCard {
     background-color: $fontColorSubtle;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: column;
-        min-height: 10rem;
-        max-height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    min-height: 10rem;
+    max-height: 15rem;
 }
 
 .catalogueCardTitle {
@@ -26,26 +26,22 @@
 }
 
 .catalogueCardSubp {
-    font-family: $fontOthers;
+    font-family: $fontColorGrey;
+    font-size: 14px;
     text-align: center;
     padding: 0 8px;
 }
 
 .catalogueCardSubh6 {
-    font-family: $fontOthers;
+    font-family: $fontColorDark;
     font-size: 20px;
     text-align: center;
     margin: 0;
 }
 
-.errorContanerMessage {
+.errorContainerMessage {
     text-align: center;
-	font-size: 2rem;
-	color: $fontTitles;
-	grid-column: 1/10;
-}
-
-.btn-outline-success {
-    color: $fontColorSubtle;
-    border-color: $fontColorGrey;
+    font-size: 3.5rem;
+    color: $fontTitles;
+    grid-column: 3/10;
 }

@@ -4,7 +4,7 @@ const gridContainer = document.getElementById('js-gridContainer');
 const htmlGridTemplate = (product) => {
     return `<div class='catalogueCard'>
                 <h3 class='catalogueCardTitle'>${product.name}</h3>
-                <p class='catalogueCardSubp>By: ${product.author}</p>
+                <p class='catalogueCardSubp'>By: ${product.author}</p>
                 <h6 class='catalogueCardSubh6'>Price: $${product.price}</h6>
             </div>`;
 }
@@ -25,21 +25,3 @@ const GridElements = (productList, container) => {
 };
 
 GridElements(productList, gridContainer);
-
-//Search Event
-const searchInput = document.getElementById('js-searchInput');
-const searchButton = document.getElementById('js-searchButton');
-
-const filterProducts = () => {
-    const searchInputValue = searchInput.value;
-
-    const filteredProducts = productList.filter((productList) => {
-        const productName = productList.name.toLowerCase();
-        return productName.includes (searchInputValue.toLowerCase());
-    });
-
-    GridElements(filteredProducts, gridContainer);
-}
-
-searchButton.addEventListener("click", filterProducts);
-
