@@ -35,6 +35,7 @@
   font-size: 20px;
   margin-bottom: 0.5rem;
   display: inline;
+  background-color: #EE4C7C;
 }
 
 .jumbotronImg {
@@ -158,28 +159,24 @@ a:active {
 }
 
 .catalogueCardSubp {
-  font-family: "Lato", sans-serif;
+  font-family: #1f2833;
+  font-size: 14px;
   text-align: center;
   padding: 0 8px;
 }
 
 .catalogueCardSubh6 {
-  font-family: "Lato", sans-serif;
+  font-family: #5D001E;
   font-size: 20px;
   text-align: center;
   margin: 0;
 }
 
-.errorContanerMessage {
+.errorContainerMessage {
   text-align: center;
-  font-size: 2rem;
+  font-size: 3.5rem;
   color: "Raleway", sans-serif;
-  grid-column: 1/10;
-}
-
-.btn-outline-success {
-  color: #EE4C7C;
-  border-color: #1f2833;
+  grid-column: 3/10;
 }
 
 /*# sourceMappingURL=style.css.map */
