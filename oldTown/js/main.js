@@ -2,7 +2,8 @@
 const searchInput = document.getElementById('js-searchInput');
 const searchButton = document.getElementById('js-searchButton');
 
-const filterProducts = () => {
+function filterProducts (e) {
+    e.preventDefault()
     const searchInputValue = searchInput.value;
 
     const filteredProducts = productList.filter((productList) => {
