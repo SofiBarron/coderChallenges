@@ -1,5 +1,3 @@
-const purchaseMethodsForm = document.getElementById('js-containerPaymentMethods');
-
 //Form Template
 const htmlFormTemplate = () => {
     return `<form>
@@ -26,7 +24,7 @@ const htmlFormTemplate = () => {
 }
 
 function showPurchaseMethods () {
-    let purchaseMethodsForm = document.createElement('div');
+    const purchaseMethodsForm = document.getElementById('js-containerPaymentMethods');
     purchaseMethodsForm.innerHTML = htmlFormTemplate;
 }
 
