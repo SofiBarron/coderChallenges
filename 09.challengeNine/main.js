@@ -1,6 +1,7 @@
 //Form Template
-const htmlFormTemplate = () => {
-    return `<form>
+const htmlFormTemplate = 
+    `<h2>Purchase Methods</h2>
+            <form>
             <fieldset class="form-group">
             <div class="row">
             <legend class="col-form-label col-sm-2 pt-0">Methods Available:</legend>
@@ -21,10 +22,10 @@ const htmlFormTemplate = () => {
             </div>
             </fieldset>
             </form>`;
-}
 
-function showPurchaseMethods () {
-    const purchaseMethodsForm = document.getElementById('js-containerPaymentMethods');
+function showPurchaseMethods (e) {
+    e.preventDefault()
+    let purchaseMethodsForm = document.getElementById('js-containerPaymentMethods');
     purchaseMethodsForm.innerHTML = htmlFormTemplate;
 }
 
