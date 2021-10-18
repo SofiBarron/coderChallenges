@@ -41,7 +41,9 @@ $('#contactDataContainer').append(
 );
 
 //Personal Info - Animation
-$('#contactDataForm:hidden').first().fadeIn('slow');
+$('#contactDataContainer').hide()
+.delay(1000)
+.fadeIn(2000);
 
 //Payment Methods Form
 $('body').append(`
@@ -81,5 +83,5 @@ $('#contactDataForm').submit(function (e) {
 
 $('#returnForm').click(() => 
 {$('#contactDataContainer').toggle();
-$('#paymentMethodsForm').hide();}
-);
+$('#paymentMethodsForm').fadeOut('slow');
+});

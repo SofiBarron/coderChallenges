@@ -5,3 +5,7 @@ body {
 h1, h2 {
     margin-bottom: 15px;
 }
+
+.contactDataContainer {
+    display: none;
+}
