@@ -25,3 +25,30 @@
 .catalogueContainer {
     margin-bottom: 150px;
 }
+
+.sectionName {
+    font-family: $fontTitles;
+    font-size: 30px;
+    font-weight: bolder;
+    color: $fontColorSubtle;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.newSection {
+    margin-bottom: 20px;
+}
+
+.arrowContainer {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.arrowStyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}

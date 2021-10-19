@@ -47,6 +47,33 @@
   margin-bottom: 150px;
 }
 
+.sectionName {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #EE4C7C;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.newSection {
+  margin-bottom: 20px;
+}
+
+.arrowContainer {
+  display: block;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.arrowStyle {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
 /*Layout*/
 /* Font Families */
 /* Font Colour Variations */
@@ -103,6 +130,7 @@ a:active {
   bottom: 0;
   width: 100%;
   background-color: #1f2833;
+  z-index: 2;
 }
 
 .footerStyle {
@@ -177,6 +205,19 @@ a:active {
   font-size: 3.5rem;
   color: "Raleway", sans-serif;
   grid-column: 3/10;
+}
+
+/* Font Families */
+/* Font Colour Variations */
+/* Box - Background Color */
+/* Box - Background */
+/* Borders Color Variations */
+.carousel-item {
+  z-index: 0;
+}
+
+.carousel-indicators {
+  z-index: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
