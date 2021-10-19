@@ -1,0 +1,24 @@
+#showCharacters {
+    margin: 15px;
+    margin-inline: 15px;
+}
+
+.gryffCard {
+    background-color:#AE0001;
+    color: white;
+}
+
+.huffleCard {
+    background-color:#FFDB00;
+    color:black;
+}
+
+.slythCard {
+    background-color:#2A623D;
+    color: #AAAAAA;
+}
+
+.ravenCard {
+    background-color:#222F5b;
+    color: white;
+}
