@@ -14,15 +14,27 @@
     flex-direction: column;
     min-height: 10rem;
     max-height: 15rem;
+    padding: 10px;
 }
 
 .catalogueCardTitle {
     text-align: center;
     font-size: 24px;
-    margin: 0;
-    padding-top: 10px;
+    margin: 10px;
     font-family: $fontTitles;
     color: $fontColorGrey;
+}
+
+.catalogueCardBtn {
+    background: $fontColorText;
+    border-color: $fontColorGrey;
+    color: $fontColorSubtle;
+    padding: 15px;
+
+    &:hover {
+        background: $fontColorDark;
+        border-color: $fontColorDark;
+    }
 }
 
 .catalogueCardSubp {
@@ -40,8 +52,11 @@
 }
 
 .errorContainerMessage {
-    text-align: center;
-    font-size: 3.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 25px;
     color: $fontTitles;
-    grid-column: 3/10;
+    color: $fontTitles;
+    grid-column: 1/6;
 }

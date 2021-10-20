@@ -1,16 +1,17 @@
 const productList = [];
 
 class Product {
-    constructor (id, name, author, price, stock) {
+    constructor (id, name, author, cover, price, stock) {
         this.id = parseInt(id);
         this.name = name;
         this.author = author;
+        this.cover = cover;
         this.price = parseFloat(price);
         this.stock = parseInt(stock);
     }
 }
 
-productList.push (new Product(1, 'Beastars Vol. 1', 'Paru Itagaki', 900, 25));
+productList.push (new Product(1, 'Beastars Vol. 1', 'Paru Itagaki', '<img src="images/theHobbit.jpg" alt="Beastars Vol. 1">', 900, 25));
 productList.push (new Product(2, 'Slam Dunk Vol. 5', 'Takehiko Inoue', 895, 25));
 productList.push (new Product(3, 'Atelier of Witch Hat Vol. 1', 'Kamome Shirahama', 525, 20));
 productList.push (new Product(4, 'Ku Vol. 1', 'Tatsuya Shihura', 450, 15));
@@ -24,7 +25,7 @@ productList.push (new Product(11, 'Elantris', 'Brandon Sanderson', 1498.2, 12));
 productList.push (new Product(12, 'The Hobbit', 'J.R.R Tolkien', 1349, 24));
 productList.push (new Product(13, 'Foundation', 'Isaac Asimov', 1200.95, 14));
 productList.push (new Product(14, 'Dune', 'Frank Herbert', 1834.07, 4));
-productList.push (new Product(15, 'This is How You Lose the Time War', 'Amal El-Mohtar and Max Gladstone', 1427.62, 3));
+productList.push (new Product(15, 'Parable of the Sower', 'Octavia E. Butler', 1427.62, 3));
 productList.push (new Product(16, 'Never Let Me Go', 'Kazuo Ishiguro', 1577.44, 7));
 productList.push (new Product(17, 'The vanishing Half', 'Brit Bennet', 1552.22, 5));
 productList.push (new Product(18, 'The Devil and the Dark Water', 'Stuart Turton', 1675, 32));

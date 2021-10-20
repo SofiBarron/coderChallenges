@@ -96,6 +96,14 @@
   border-color: #9A1750;
 }
 
+.cart {
+  border-color: #1f2833;
+  color: #9A1750;
+}
+.cart:hover {
+  color: #EE4C7C;
+}
+
 /* Font Families */
 /* Font Colour Variations */
 /* Box - Background Color */
@@ -175,15 +183,26 @@ a:active {
   flex-direction: column;
   min-height: 10rem;
   max-height: 15rem;
+  padding: 10px;
 }
 
 .catalogueCardTitle {
   text-align: center;
   font-size: 24px;
-  margin: 0;
-  padding-top: 10px;
+  margin: 10px;
   font-family: "Raleway", sans-serif;
   color: #1f2833;
+}
+
+.catalogueCardBtn {
+  background: #272727;
+  border-color: #1f2833;
+  color: #EE4C7C;
+  padding: 15px;
+}
+.catalogueCardBtn:hover {
+  background: #5D001E;
+  border-color: #5D001E;
 }
 
 .catalogueCardSubp {
@@ -201,10 +220,13 @@ a:active {
 }
 
 .errorContainerMessage {
-  text-align: center;
-  font-size: 3.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 25px;
   color: "Raleway", sans-serif;
-  grid-column: 3/10;
+  color: "Raleway", sans-serif;
+  grid-column: 1/6;
 }
 
 /* Font Families */

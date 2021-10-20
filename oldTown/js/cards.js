@@ -5,7 +5,9 @@ const htmlGridTemplate = (product) => {
     return `<div class='catalogueCard'>
                 <h3 class='catalogueCardTitle'>${product.name}</h3>
                 <p class='catalogueCardSubp'>By: ${product.author}</p>
-                <h6 class='catalogueCardSubh6'>Price: $${product.price}</h6>
+                <h6 class='catalogueCardSubh6'>$${product.price}</h6>
+                <button class="btn btn-primary mt-auto btn-block catalogueCardBtn" id="${product.id}">Add to Cart</button>
+                </div>
             </div>`;
 }
 

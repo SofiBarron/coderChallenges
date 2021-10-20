@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!--Fonts-->
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Lato&family=Raleway&display=swap" rel="stylesheet">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Raleway&display=swap" rel="stylesheet">
 
-<!--Bootstrap-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-<!--Styles-->
-<link rel="stylesheet" href="style/css/style.css">
+    <!--Styles-->
+    <link rel="stylesheet" href="style/css/style.css">
 
-<title>Old Town | Books and More | Shop</title>
+    <title>Old Town | Books and More | Your Cart</title>
 </head>
 
 <body class="mainBgColor">
-
     <!--Header - Navbar-->
     <header class="menuStyle">
         <nav class="navbar navbar-dark bg-dark justify-content-between">
@@ -45,28 +45,8 @@
     </header>
 
     <main>
-        <!--Catalogue Intro-->
-        <section class="jumbotron-fluid container-fluid">
-            <div class="jumbotron jumbotron-fluid jumbotronImg" style="background-image: url(images/bannerComics.jpg);">
-                <div class="container">
-                    <h1 class="display-4 introTitle ">Shop</h1>
-                    <p class="lead introParagraph">Find your books here!</p>
-                </div>
-            </div>
-        </section>
-
-        <!--New In Selection-->
-        <section class="container newSection" id="newIn"></section>
-
-        <!-- Catalogue Grid -->
-        <section class="container catalogueContainer" id='container'>
-            <h2 class="sectionName">Catalogue</h2>
-            <div class="container__grid" id="js-gridContainer">
-            </div>
-
-        <!--Return to Top-->
-        <div class="arrowContainer" id="toTop"></div>
-        </section>
+        <!--Modal-->
+        
     </main>
 
     <!-- Footer -->
@@ -87,14 +67,16 @@
     <script src="https://kit.fontawesome.com/fa21025153.js" crossorigin="anonymous"></script>
 
     <!--JQuery + Bootstrap-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
+    </script>
 
     <!--JS Links -->
     <script src="js/main.js"></script>
     <script src='js/products.js'></script>
     <script src="js/cards.js"></script>
-    
 </body>
 
 </html>

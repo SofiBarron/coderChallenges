@@ -16,3 +16,12 @@
         border-color: $fontColorHighlight;
     }
 }
+
+.cart {
+    border-color: $fontColorGrey;
+    color: $fontColorHighlight;
+
+    &:hover {
+        color: $fontColorSubtle;
+    }
+}
