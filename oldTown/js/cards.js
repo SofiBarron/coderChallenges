@@ -39,6 +39,5 @@ $('.addToCart').click(function() {
         300, function() {
             $(this).text(itemCounter);
         }
-        ), 
-        console.log("up to here!");
+        );
     })
