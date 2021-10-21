@@ -38,6 +38,11 @@ $('.addToCart').click(function() {
         opacity: 1},
         300, function() {
             $(this).text(itemCounter);
-        }
-        );
+        })
+        toastr.success('Your books has been added','Done!',{
+            "timeOut": 0,
+            "extendedTimeOut": 0,
+            "progressBar": true,
+            "preventDuplicates": true,
+        });
     })
