@@ -35,6 +35,7 @@ $('#newIn').append(`
 </div>
     `);
 
+//Back to top Arrow
 $('#toTop').append(
     `<div class="arrowStyle">
     <a href="#top" id="bottom"><i class="fas fa-arrow-up fa-2x"></i></a>

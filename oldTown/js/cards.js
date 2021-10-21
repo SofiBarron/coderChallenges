@@ -2,11 +2,12 @@ const gridContainer = document.getElementById('js-gridContainer');
 
 //HTML Template
 const htmlGridTemplate = (product) => {
-    return `<div class='catalogueCard'>
+    return `<div class='catalogueCard '>
                 <h3 class='catalogueCardTitle'>${product.name}</h3>
                 <p class='catalogueCardSubp'>By: ${product.author}</p>
                 <h6 class='catalogueCardSubh6'>$${product.price}</h6>
-                <button class="btn btn-primary mt-auto btn-block catalogueCardBtn" id="${product.id}">Add to Cart</button>
+                <button class="btn btn-primary mt-auto btn-block catalogueCardBtn addToCart">Add to Cart
+                </button>
                 </div>
             </div>`;
 }
@@ -27,3 +28,17 @@ const GridElements = (productList, container) => {
 };
 
 GridElements(productList, gridContainer);
+
+//Add Item to Cart 
+let itemCounter = 0;
+
+$('.addToCart').click(function() {
+    itemCounter += +1;
+    $("#cartCounter").animate({
+        opacity: 1},
+        300, function() {
+            $(this).text(itemCounter);
+        }
+        ), 
+        console.log("up to here!");
+    })

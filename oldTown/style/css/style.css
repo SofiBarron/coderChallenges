@@ -242,4 +242,11 @@ a:active {
   z-index: 1;
 }
 
+.carousel-caption {
+  box-shadow: 10px 5px 5px black;
+  background-color: rgba(73, 90, 88, 0.77);
+  margin: 18px;
+  padding: 15px;
+}
+
 /*# sourceMappingURL=style.css.map */

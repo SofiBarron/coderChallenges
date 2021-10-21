@@ -1,17 +1,16 @@
 const productList = [];
 
 class Product {
-    constructor (id, name, author, cover, price, stock) {
+    constructor (id, name, author, price, stock) {
         this.id = parseInt(id);
         this.name = name;
         this.author = author;
-        this.cover = cover;
         this.price = parseFloat(price);
         this.stock = parseInt(stock);
     }
 }
 
-productList.push (new Product(1, 'Beastars Vol. 1', 'Paru Itagaki', '<img src="images/theHobbit.jpg" alt="Beastars Vol. 1">', 900, 25));
+productList.push (new Product(1, 'Beastars Vol. 1', 'Paru Itagaki', 900, 25));
 productList.push (new Product(2, 'Slam Dunk Vol. 5', 'Takehiko Inoue', 895, 25));
 productList.push (new Product(3, 'Atelier of Witch Hat Vol. 1', 'Kamome Shirahama', 525, 20));
 productList.push (new Product(4, 'Ku Vol. 1', 'Tatsuya Shihura', 450, 15));
