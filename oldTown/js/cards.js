@@ -2,9 +2,13 @@ const gridContainer = document.getElementById('js-gridContainer');
 
 //HTML Template
 const htmlGridTemplate = (product) => {
-    return `<div class='catalogueCard '>
-                <h3 class='catalogueCardTitle'>${product.name}</h3>
-                <p class='catalogueCardSubp'>By: ${product.author}</p>
+    return `<div class='catalogueCard card'>
+                <div class='card-img'>
+                <img src='${product.coverPicture}' class="card-img-top img-fluid cardImg" alt="Book cover">
+                </div>
+                <div class='card-body d-flex flex-column'>
+                <h3 class='catalogueCardTitle card-title'>${product.name}</h3>
+                <p class='catalogueCardSubp card-text'>By: ${product.author}</p>
                 <h6 class='catalogueCardSubh6'>$${product.price}</h6>
                 <button class="btn btn-primary mt-auto btn-block catalogueCardBtn addToCart">Add to Cart
                 </button>
@@ -28,21 +32,3 @@ const GridElements = (productList, container) => {
 };
 
 GridElements(productList, gridContainer);
-
-//Add Item to Cart 
-let itemCounter = 0;
-
-$('.addToCart').click(function() {
-    itemCounter += +1;
-    $("#cartCounter").animate({
-        opacity: 1},
-        300, function() {
-            $(this).text(itemCounter);
-        })
-        toastr.success('Your books has been added','Done!',{
-            "timeOut": 0,
-            "extendedTimeOut": 0,
-            "progressBar": true,
-            "preventDuplicates": true,
-        });
-    })

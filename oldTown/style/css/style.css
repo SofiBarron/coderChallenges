@@ -54,6 +54,7 @@
   color: #EE4C7C;
   display: flex;
   justify-content: flex-start;
+  margin: 15px;
 }
 
 .newSection {
@@ -171,7 +172,7 @@ a:active {
 /* Borders Color Variations */
 .container__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 2fr));
   grid-gap: 2rem;
 }
 
@@ -182,8 +183,13 @@ a:active {
   justify-content: space-around;
   flex-direction: column;
   min-height: 10rem;
-  max-height: 15rem;
+  max-height: 45rem;
   padding: 10px;
+}
+.catalogueCard:hover {
+  transform: scale(1.05);
+  transition: 500ms;
+  box-shadow: 10px 10px 10px #888888;
 }
 
 .catalogueCardTitle {
@@ -199,6 +205,7 @@ a:active {
   border-color: #1f2833;
   color: #EE4C7C;
   padding: 15px;
+  width: 100%;
 }
 .catalogueCardBtn:hover {
   background: #5D001E;
@@ -216,7 +223,15 @@ a:active {
   font-family: #5D001E;
   font-size: 20px;
   text-align: center;
-  margin: 0;
+  margin-bottom: 15px;
+}
+
+.card-img {
+  width: 100%;
+  height: 350px;
+  display: block;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .errorContainerMessage {
