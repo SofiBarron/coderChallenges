@@ -240,7 +240,6 @@ a:active {
   justify-content: space-around;
   font-size: 25px;
   color: "Raleway", sans-serif;
-  color: "Raleway", sans-serif;
   grid-column: 1/6;
 }
 
@@ -262,6 +261,40 @@ a:active {
   background-color: rgba(73, 90, 88, 0.77);
   margin: 18px;
   padding: 15px;
+}
+
+/* Font Families */
+/* Font Colour Variations */
+/* Box - Background Color */
+/* Box - Background */
+/* Borders Color Variations */
+.modal-content {
+  background-color: #EFE2BA;
+}
+
+.modal-header {
+  font-family: "Raleway", sans-serif;
+  color: #9A1750;
+  border-bottom: 1px solid #1f2833;
+}
+
+.modal-body {
+  background-color: #EFE2BA;
+}
+
+.modal-footer {
+  border-top: 2px solid #EE4C7C;
+}
+
+.cartEmptyMessage {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  color: #9A1750;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  grid-column: 1/6;
 }
 
 /*# sourceMappingURL=style.css.map */

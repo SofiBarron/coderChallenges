@@ -1,0 +1,30 @@
+@import '../abstracts/variables';
+
+.modal-content {
+    background-color: #EFE2BA;
+}
+
+.modal-header {
+    font-family: $fontTitles;
+    color: $fontColorHighlight;
+    border-bottom: 1px solid $fontColorGrey;
+}
+
+.modal-body {
+    background-color: #EFE2BA;
+}
+
+.modal-footer {
+    border-top: 2px solid $fontColorSubtle;
+}
+
+.cartEmptyMessage {
+    font-family: $fontOthers;
+    font-weight: bold;
+    color: $fontColorHighlight;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    grid-column: 1/6;
+}
