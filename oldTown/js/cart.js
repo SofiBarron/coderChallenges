@@ -39,7 +39,7 @@ const emptyModal = () => {
         </div>`
 }
 
-//Template Generator
+//Template Generator for Product View on Modal
 const modalItemView = (cart, modalContainer, selectedItems) => {
     modalContainer.innerHTML='';
     selectedItems.innerHTML='';
