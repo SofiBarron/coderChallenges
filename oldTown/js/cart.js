@@ -1,5 +1,11 @@
-//Button Interaction
+//Add to Cart - Button Interaction
 $('.addToCart').click(addToCounter);
+
+//Cart - Button Interaction
+$('#cartButton').click(function() {
+    showEmptyModalView();
+    updateCart();
+})
 
 //Cart Logic
 let cart = [];
@@ -95,6 +101,7 @@ function showEmptyModalView() {
 
 //Purchase Made - Clear Cart
 $('#buyButton').click(function () {
+    $('#cartModal').modal('hide');
     cart = [];
     updateCart();
     resetCounter();
