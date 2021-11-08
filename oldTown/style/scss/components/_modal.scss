@@ -16,6 +16,43 @@
 
 .modal-body {
     background-color: #EFE2BA;
+    font-family: $fontOthers;
+
+    h4 {
+        color: $fontColorSubtle;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    #totalPrice {
+        font-family: $fontOthers;
+        color: $fontColorGrey;
+        font-size: 16px;
+    }
+}
+
+#selectedItems {
+    p {
+        font-family: $fontOthers;
+        color: $fontColorGrey;
+        font-size: 16px;
+    }
+}
+
+#buyButton {
+    background: $fontColorSubtle;
+    border-color: $fontColorSubtle;
+    color: $fontColorGrey;
+
+    &:hover {
+        background: $fontColorDark;
+        border-color: $fontColorDark;
+        color: $fontColorSubtle;
+    }
+}
+
+.btn-secondary {
+    background: $fontColorGrey;
 }
 
 .cartModalDetails {

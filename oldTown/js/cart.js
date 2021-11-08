@@ -21,6 +21,18 @@ const modalContents = (product) => {
         </div>`
 }
 
+//Modal Empty Template
+const emptyModal = () => {
+    return `<div class="modal-body emptyModal">
+            <div class="container-fluid">
+                <p class="cartEmptyMessage">The cart is empty!</p>
+            </div>
+            </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>`
+}
+
 //Template Generator
 const modalItemView = (cart, modalContainer, selectedItems) => {
     modalContainer.innerHTML = '';
@@ -34,17 +46,11 @@ const modalItemView = (cart, modalContainer, selectedItems) => {
             $('.cartModalDetails').show();
         }
     } else {
-        modalContainer.innerHTML = `<div class="modal-body emptyModal">
-            <div class="container-fluid">
-                <p class="cartEmptyMessage">The cart is empty!</p>
-            </div>
-        </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>`;
+        $('.cartModalDetails').hide();
+        modalContainer.innerHTML = emptyModal;
+        $('.emptyModal').show();
     }
 }
-
 
 //Calculator
 function calculateTotalToPay () {
@@ -65,7 +71,7 @@ function updateCart () {
     cart.forEach((product) => {
         const itemsListed = modalContents(product);
 
-        modalItemView(cart,itemsListed,selectedItems);
+        modalItemView(cart,itemsListed,selectedItems,modalContainer);
     })
     calculateTotalToPay();
 }

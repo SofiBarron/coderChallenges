@@ -284,6 +284,38 @@ a:active {
 
 .modal-body {
   background-color: #EFE2BA;
+  font-family: "Lato", sans-serif;
+}
+.modal-body h4 {
+  color: #EE4C7C;
+  font-weight: bold;
+  font-size: 18px;
+}
+.modal-body #totalPrice {
+  font-family: "Lato", sans-serif;
+  color: #1f2833;
+  font-size: 16px;
+}
+
+#selectedItems p {
+  font-family: "Lato", sans-serif;
+  color: #1f2833;
+  font-size: 16px;
+}
+
+#buyButton {
+  background: #EE4C7C;
+  border-color: #EE4C7C;
+  color: #1f2833;
+}
+#buyButton:hover {
+  background: #5D001E;
+  border-color: #5D001E;
+  color: #EE4C7C;
+}
+
+.btn-secondary {
+  background: #1f2833;
 }
 
 .cartModalDetails {
