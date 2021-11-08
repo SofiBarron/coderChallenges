@@ -10,7 +10,7 @@ const htmlGridTemplate = (product) => {
                 <h3 class='catalogueCardTitle card-title'>${product.name}</h3>
                 <p class='catalogueCardSubp card-text'>By: ${product.author}</p>
                 <h6 class='catalogueCardSubh6'>$${product.price}</h6>
-                <button onclick='addItemsToCart(${JSON.stringify(product)})' class="btn btn-primary mt-auto btn-block catalogueCardBtn addToCart" id="${product.id}">Add to Cart
+                <button onclick='addItemsToCart(${JSON.stringify(product)})' class="btn btn-primary btn-block mt-auto catalogueCardBtn addToCart" id="${product.id}">Add to Cart
                 </button>
                 </div>
             </div>`;

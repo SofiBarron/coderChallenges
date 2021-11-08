@@ -23,7 +23,7 @@ const modalContents = (product) => {
 
 //Modal Empty Template
 const emptyModal = () => {
-    return `<div class="modal-body emptyModal">
+    return `<div class="modal-body">
             <div class="container-fluid">
                 <p class="cartEmptyMessage">The cart is empty!</p>
             </div>
@@ -35,26 +35,22 @@ const emptyModal = () => {
 
 //Template Generator
 const modalItemView = (cart, modalContainer, selectedItems) => {
-    modalContainer.innerHTML = '';
+    modalContainer.innerHTML='';
     selectedItems.innerHTML='';
+
 
     if (cart.length > 0) {
         for (const product of cart) {
-            const itemsGrid = modalContents(product);
-
-            selectedItems.innerHTML += itemsGrid;
             $('.cartModalDetails').show();
+            const itemsGrid = modalContents(product);
+            selectedItems.innerHTML += itemsGrid;
         }
-    } else {
-        $('.cartModalDetails').hide();
-        modalContainer.innerHTML = emptyModal;
-        $('.emptyModal').show();
     }
 }
 
 //Calculator
 function calculateTotalToPay () {
-    totalToPay = cart.reduce((acc, el) => acc += el.price, 0);
+    totalToPay = parseFloat(cart.reduce((acc, el) => acc += el.price, 0)).toFixed(2);
     document.getElementById('totalPrice').innerHTML = `$${totalToPay}`;
 }
 
@@ -71,9 +67,10 @@ function updateCart () {
     cart.forEach((product) => {
         const itemsListed = modalContents(product);
 
-        modalItemView(cart,itemsListed,selectedItems,modalContainer);
+        modalItemView(cart,itemsListed,selectedItems);
     })
     calculateTotalToPay();
+    showEmptyModalView();
 }
 
 //Remove item from cart
@@ -82,5 +79,30 @@ function removeItem(id) {
     let index = cart.indexOf(itemToBeRemoved)
     cart.splice(index,1);
     updateCart();
-    removeFromCounter ();
+    removeFromCounter();
 }
+
+//Empty modal view 
+function showEmptyModalView() {
+    if (cart.length == 0) {
+        modalContainer.innerHTML = '';
+        $('.cartModalDetails').hide();
+        modalContainer.innerHTML += emptyModal();
+    } else {
+        modalContainer.innerHTML = '';
+    }
+}
+
+//Purchase Made - Clear Cart
+$('#buyButton').click(function () {
+    cart = [];
+    updateCart();
+    resetCounter();
+
+    toastr.success('Happy reading','Bought!',{
+        "timeOut": 0,
+        "extendedTimeOut": 0,
+        "progressBar": true,
+        "preventDuplicates": true,
+    });
+})

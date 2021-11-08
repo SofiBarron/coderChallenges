@@ -64,3 +64,12 @@ function removeFromCounter () {
             $(this).text(itemCounter);
         })
 }
+
+function resetCounter () {
+    itemCounter = 0;
+    $("#cartCounter").animate({
+        opacity: 1},
+        300, function() {
+            $(this).text(itemCounter);
+        })
+}
