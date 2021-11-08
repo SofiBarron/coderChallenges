@@ -52,6 +52,7 @@ function calculateTotalToPay () {
     document.getElementById('totalPrice').innerHTML = `$${totalToPay}`;
 }
 
+//Add items to cart
 function addItemsToCart(product) {
     cart.push(product);
     updateCart();
