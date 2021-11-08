@@ -5,22 +5,29 @@
 }
 
 .modal-header {
+    border-bottom: 1px solid $fontColorSubtle;
+}
+
+.modal-title {
     font-family: $fontTitles;
     color: $fontColorHighlight;
-    border-bottom: 1px solid $fontColorGrey;
+    font-weight: bolder;
 }
 
 .modal-body {
     background-color: #EFE2BA;
 }
 
+.cartModalDetails {
+    display: none;
+}
+
 .modal-footer {
-    border-top: 2px solid $fontColorSubtle;
+    border-top: 1px solid $fontColorSubtle;
 }
 
 .cartEmptyMessage {
     font-family: $fontOthers;
-    font-weight: bold;
     color: $fontColorHighlight;
     font-size: 20px;
     display: flex;

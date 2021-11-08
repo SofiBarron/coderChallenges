@@ -1,4 +1,4 @@
-//Back to top Arrow
+//Back to top - Arrow
 $('#toTop').append(
     `<div class="arrowStyle">
     <a href="#top" id="bottom"><i class="fas fa-arrow-up fa-2x"></i></a>
@@ -17,7 +17,7 @@ $('#bottom').click(function(e) {
     }
 });
 
-//Search Event
+//Search Event Functionality
 const searchInput = document.getElementById('js-searchInput');
 const searchButton = document.getElementById('js-searchButton');
 
@@ -34,3 +34,33 @@ function filterProducts (e) {
 }
 
 searchButton.addEventListener("click", filterProducts);
+
+//Item Counter Functionality
+let itemCounter = 0;
+
+function addToCounter () {
+    //Update value
+    itemCounter += +1;
+    $("#cartCounter").animate({
+        opacity: 1},
+        300, function() {
+            $(this).text(itemCounter);
+        })
+        
+        //Show notification toaster
+        toastr.success('Find your picks in the cart','Done!',{
+            "timeOut": 0,
+            "extendedTimeOut": 0,
+            "progressBar": true,
+            "preventDuplicates": true,
+        });
+} 
+
+function removeFromCounter () {
+    itemCounter += -1;
+    $("#cartCounter").animate({
+        opacity: 1},
+        300, function() {
+            $(this).text(itemCounter);
+        })
+}

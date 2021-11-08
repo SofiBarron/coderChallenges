@@ -1,82 +1,79 @@
-//Item Counter
-let itemCounter = 0;
-
-//Update number shown on counter
-function updateCounterWhenAdding () {
-    itemCounter += +1;
-    $("#cartCounter").animate({
-        opacity: 1},
-        300, function() {
-            $(this).text(itemCounter);
-        })
-        
-        //Show notification toaster
-        toastr.success('Find your picks in the cart','Done!',{
-            "timeOut": 0,
-            "extendedTimeOut": 0,
-            "progressBar": true,
-            "preventDuplicates": true,
-        });
-} 
-
 //Button Interaction
-$('.addToCart').click(updateCounterWhenAdding);
+$('.addToCart').click(addToCounter);
 
-//Modal Details
-let modalData = document.getElementById('modalContainer');
+//Cart Logic
+let cart = [];
+let totalToPay = 0;
 
-//Modal Body Template Empty State
-const modalItemListEmptyTemplate = `<div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <p class="cartEmptyMessage">The cart is empty!</p>
-                    </div>
-                </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+//Cart Modal View
+const itemsContainer = document.getElementById('selectedItems');
+const modalBody = document.getElementById('modalContainer');
+
+//Modal Content Template
+const modalContents = (product) => {
+    return `<div class="row justify-content-around">
+            <p class="col-md-4">${product.name}</p>
+            <p class="col-md-4">${product.author}</p>
+            <p class="col-md-3">$${product.price}</p>
+            <div class="col-md-1 ml-auto">
+                <a href="#" onclick='removeItem(${product.id})' type='button' class='removeItem'><i class="far fa-times-circle fa-1x"></i></a>
             </div>
-        </div>`;
-
-//Modal Body Template For Items
-const modalItemListTemplate = (product) => {
-    return `<div class="modal-body">
-            <div class="container-fluid">
-                <div class="row justify-content-around">
-                    <h4 class="col-md-4">Title</h4>
-                    <h4 class="col-md-4">Author</h4>
-                    <h4 class="col-md-3">Price</h4>
-                    <h4 class="col-md-1 ml-auto"></h4>
-                </div>
-                <div class="row justify-content-around">
-                    <p class="col-md-4">${product.name}</p>
-                    <p class="col-md-4">${product.author}</p>
-                    <p class="col-md-3">${product.price}</p>
-                    <div class="col-md-1 ml-auto">
-                        <a href="#"><i class="far fa-times-circle fa-1x"></i></a>
-                    </div>
-                </div>
-                <div class="row align-items-end">
-                    <h4 class="col-md-3 ml-auto">Total:</h4>
-                    <h3>$0</h3>
-                </div>
-            </div>
-        </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>`
+        </div>`
 }
 
-modalContainer.innerHTML = modalItemListEmptyTemplate;
+//Template Generator
+const modalItemView = (cart, modalContainer, selectedItems) => {
+    modalContainer.innerHTML = '';
+    selectedItems.innerHTML='';
 
-//Modal view function
-//let cartModalView = (modalContainer) => {
-//    modalContainer.innerHTML = '';
-//
-//    if (cartStorage = []) {
-//        modalContainer.innerHTML = modalItemListEmptyTemplate;
-//    } 
-//    else {
-//        modalContainer.innerHTML = modalItemListTemplate;
-//    } 
-//}
+    if (cart.length > 0) {
+        for (const product of cart) {
+            const itemsGrid = modalContents(product);
+
+            selectedItems.innerHTML += itemsGrid;
+            $('.cartModalDetails').show();
+        }
+    } else {
+        modalContainer.innerHTML = `<div class="modal-body emptyModal">
+            <div class="container-fluid">
+                <p class="cartEmptyMessage">The cart is empty!</p>
+            </div>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>`;
+    }
+}
+
+
+//Calculator
+function calculateTotalToPay () {
+    totalToPay = cart.reduce((acc, el) => acc += el.price, 0);
+    document.getElementById('totalPrice').innerHTML = `$${totalToPay}`;
+}
+
+function addItemsToCart(product) {
+    cart.push(product);
+    updateCart();
+}
+
+//Update Cart
+function updateCart () {
+    selectedItems.innerHTML = '';
+
+    cart.forEach((product) => {
+        const itemsListed = modalContents(product);
+
+        modalItemView(cart,itemsListed,selectedItems);
+    })
+    calculateTotalToPay();
+}
+
+//Remove item from cart
+function removeItem(id) {
+    let itemToBeRemoved = cart.find((element) => element.id == id);
+    let index = cart.indexOf(itemToBeRemoved)
+    cart.splice(index,1);
+    updateCart();
+    removeFromCounter ();
+}

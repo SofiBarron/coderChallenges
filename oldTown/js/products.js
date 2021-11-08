@@ -32,3 +32,10 @@ productList.push (new Product(18, 'The Devil and the Dark Water', 'Stuart Turton
 productList.push (new Product(19, 'The Phone Box at the Edge...', 'Laura Imai Messina', 'images/phoneBox.jpg', 2983, 7000));
 productList.push (new Product(20, 'Project Hail Mary', 'Andy Weir', 'images/hailMary.jpg', 2399, 7000));
 
+const saveProductList = (key, value) => {
+    localStorage.setItem(key, value);
+}
+
+for (const product of productList) {
+    saveProductList(product.id, JSON.stringify(product));
+}

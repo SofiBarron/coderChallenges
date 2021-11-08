@@ -273,22 +273,29 @@ a:active {
 }
 
 .modal-header {
+  border-bottom: 1px solid #EE4C7C;
+}
+
+.modal-title {
   font-family: "Raleway", sans-serif;
   color: #9A1750;
-  border-bottom: 1px solid #1f2833;
+  font-weight: bolder;
 }
 
 .modal-body {
   background-color: #EFE2BA;
 }
 
+.cartModalDetails {
+  display: none;
+}
+
 .modal-footer {
-  border-top: 2px solid #EE4C7C;
+  border-top: 1px solid #EE4C7C;
 }
 
 .cartEmptyMessage {
   font-family: "Lato", sans-serif;
-  font-weight: bold;
   color: #9A1750;
   font-size: 20px;
   display: flex;
